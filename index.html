@@ -480,6 +480,22 @@ body { font-family: var(--font-body); color: var(--fg); -webkit-font-smoothing: 
   letter-spacing: 0.01em; text-align: left; font-weight: 400;
   font-size: clamp(14px,2vw,17px); max-width: 340px;
 }
+.wishes-organizer {
+  margin-top: 36px; display: flex; flex-direction: column; gap: 12px;
+}
+.wishes-organizer-text {
+  font-family: var(--font-body); font-size: clamp(13px,1.8vw,15px);
+  color: rgba(245,239,226,0.65); line-height: 1.5; max-width: 300px;
+}
+.wishes-organizer-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(245,239,226,0.12); border: 1px solid rgba(245,239,226,0.25);
+  color: #F5EFE2; text-decoration: none;
+  font-family: var(--font-body); font-size: 14px; font-weight: 500;
+  padding: 10px 20px; border-radius: 40px;
+  transition: background 0.2s;
+}
+.wishes-organizer-btn:hover { background: rgba(245,239,226,0.22); }
 
 /* Mobile overrides */
 @media (max-width: 768px) {
@@ -904,6 +920,16 @@ body { font-family: var(--font-body); color: var(--fg); -webkit-font-smoothing: 
       <p class="wishes-text">
         Также просим вас отказаться от покупки цветов. Лучшим комплиментом для нас станет бутылочка хорошего вина, которая пополнит наш первый семейный бар.
       </p>
+      <div class="wishes-organizer">
+        <p class="wishes-organizer-text">Если у вас возникнут вопросы, можете написать нашему организатору для уточнения</p>
+        <a class="wishes-organizer-btn" href="https://t.me/frlvaaa" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M21.5 4.5L2.5 11.5L10 13.5L13.5 21.5L21.5 4.5Z" stroke="#F5EFE2" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M10 13.5L14.5 9" stroke="#F5EFE2" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          Написать организатору
+        </a>
+      </div>
     </div>
   </div>
   <div class="torn-edge torn-edge--bottom">
