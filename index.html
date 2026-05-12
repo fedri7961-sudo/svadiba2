@@ -21,8 +21,8 @@
   --font-body: 'Jost', sans-serif;
   --font-hand: 'Caveat', cursive;
 }
-html, body { background: var(--cream); }
-body { font-family: var(--font-body); color: var(--fg); -webkit-font-smoothing: antialiased; }
+html, body { background: var(--cream); overflow-x: hidden; max-width: 100%; }
+body { font-family: var(--font-body); color: var(--fg); -webkit-font-smoothing: antialiased; width: 100%; }
 
 @media print {
   @page { size: A4 portrait; margin: 0; }
@@ -740,7 +740,7 @@ body { font-family: var(--font-body); color: var(--fg); -webkit-font-smoothing: 
   </div>
   <div class="venue-content">
     <!-- Yandex Maps button -->
-    <div class="yandex-btn-wrap anim anim--in">
+    <div class="yandex-btn-wrap">
       <a class="yandex-btn" href="https://yandex.ru/maps/-/CPSbe-Me" target="_blank" rel="noopener noreferrer">
         <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
           <circle cx="7" cy="6" r="2.2" stroke="#F5EFE2" stroke-width="1.2"/>
@@ -751,7 +751,7 @@ body { font-family: var(--font-body); color: var(--fg); -webkit-font-smoothing: 
       <span class="yandex-hint">нажмите, чтобы посмотреть</span>
     </div>
     <!-- Info card -->
-    <div class="venue-card anim anim--right">
+    <div class="venue-card">
       <svg viewBox="0 0 440 32" preserveAspectRatio="none" style="display:block;width:100%;height:19px">
         <path d="M0,32 C40,8 80,28 120,16 C160,4 200,24 240,14 C280,4 320,22 360,12 C390,4 420,18 440,10 L440,32 Z" fill="rgba(242,237,228,0.96)"/>
       </svg>
@@ -795,7 +795,7 @@ body { font-family: var(--font-body); color: var(--fg); -webkit-font-smoothing: 
     </svg>
   </div>
   <div class="timing-content">
-    <div class="timing-card anim anim--left">
+    <div class="timing-card">
       <svg viewBox="0 0 440 32" preserveAspectRatio="none" style="display:block;width:100%;height:21px">
         <path d="M0,32 C40,8 80,28 120,16 C160,4 200,24 240,14 C280,4 320,22 360,12 C390,4 420,18 440,10 L440,32 Z" fill="rgba(61,74,53,0.93)"/>
       </svg>
@@ -895,7 +895,7 @@ body { font-family: var(--font-body); color: var(--fg); -webkit-font-smoothing: 
     </svg>
   </div>
   <div class="wishes-content">
-    <div class="wishes-inner anim anim--left">
+    <div class="wishes-inner">
       <div class="wishes-line-top"></div>
       <p class="wishes-quote">
         Будем рады вашим тёплым словам и пожеланиям в конвертах!
