@@ -224,7 +224,7 @@ body { font-family: var(--font-body); color: var(--fg); -webkit-font-smoothing: 
 
 /* Notebook paper */
 .notebook-outer {
-  margin-bottom: clamp(20px,3vh,40px); position: relative; display: inline-block;
+  margin-bottom: clamp(20px,3vh,40px); position: relative; display: inline-block; align-self: center;
 }
 .notebook-svg {
   display: block; filter: drop-shadow(2px 3px 8px rgba(0,0,0,0.13));
@@ -232,12 +232,12 @@ body { font-family: var(--font-body); color: var(--fg); -webkit-font-smoothing: 
 }
 .notebook-label {
   position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
-  padding-left: 44px; padding-top: 6px;
+  padding-left: 24px; padding-top: 6px;
 }
 .notebook-label span {
-  font-family: var(--font-hand); font-size: clamp(18px,4vw,26px);
+  font-family: var(--font-hand); font-size: clamp(22px,5vw,32px);
   font-weight: 700; color: #2A2520; letter-spacing: 0.03em; line-height: 1.1;
-  width: 270px; text-align: right;
+  width: 270px; text-align: center;
 }
 
 /* Three-photo row */
@@ -834,7 +834,7 @@ body { font-family: var(--font-body); color: var(--fg); -webkit-font-smoothing: 
           <!-- item 4 (last – no connector) -->
           <div class="timing-item">
             <div class="timing-time-col">
-              <div class="timing-time">00:00</div>
+              <div class="timing-time">23:00</div>
             </div>
             <div class="timing-dot"></div>
             <p class="timing-text timing-text--last">Завершение праздника</p>
@@ -862,7 +862,7 @@ body { font-family: var(--font-body); color: var(--fg); -webkit-font-smoothing: 
   </div>
   <div class="dresscode-inner">
     <h2 class="dresscode-title anim anim--up">
-      Мы мечтаем о красивом и эстетичном празднике, поэтому просим вас придерживаться нашей цветовой гаммы
+      Мы мечтаем о красивом и эстетичном празднике, поэтому у нас введена определенная цветовая гамма
     </h2>
     <div class="dresscode-video-wrap">
       <video id="dresscodeVideo" src="photos/dresscode.mp4" autoplay muted loop playsinline></video>
