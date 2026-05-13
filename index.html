@@ -967,22 +967,27 @@ body { font-family: var(--font-body); color: var(--fg); -webkit-font-smoothing: 
   var dc = document.getElementById('dresscodeVideo');
   if (dc) dc.playbackRate = 0.35;
 
-  /* ── Scroll animations (scroll event, Telegram-safe) ── */
+  /* ── Scroll animations ── */
   var animEls = Array.from(document.querySelectorAll('.anim'));
-  function checkAnims() {
-    animEls = animEls.filter(function(el) {
-      var rect = el.getBoundingClientRect();
-      // fire only when element enters from below while scrolling down
-      if (rect.top >= 0 && rect.top < window.innerHeight * 0.88) {
-        el.classList.add('anim--on');
-        return false;
-      }
-      return true;
-    });
-    if (!animEls.length) window.removeEventListener('scroll', checkAnims);
+  if (window.innerWidth <= 768) {
+    // mobile: show everything immediately, no scroll animation
+    animEls.forEach(function(el) { el.classList.add('anim--on'); });
+  } else {
+    // desktop: animate only when element enters from below (scroll down)
+    function checkAnims() {
+      animEls = animEls.filter(function(el) {
+        var rect = el.getBoundingClientRect();
+        if (rect.top >= 0 && rect.top < window.innerHeight * 0.88) {
+          el.classList.add('anim--on');
+          return false;
+        }
+        return true;
+      });
+      if (!animEls.length) window.removeEventListener('scroll', checkAnims);
+    }
+    window.addEventListener('scroll', checkAnims, { passive: true });
+    checkAnims();
   }
-  window.addEventListener('scroll', checkAnims, { passive: true });
-  checkAnims();
 
   /* ── Auto-print after fonts load ── */
   (function autoPrint() {
